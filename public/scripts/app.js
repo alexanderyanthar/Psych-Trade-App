@@ -57,7 +57,6 @@ hamburgerMenu.addEventListener('click', () => {
     }
 })
 
-// form submission
 // front-end JavaScript (front-end-js-file.js)
 
 document.getElementById('signup-Button').addEventListener('click', () => {
@@ -68,12 +67,12 @@ document.getElementById('signup-Button').addEventListener('click', () => {
 //   window.location.href = 'http://localhost:3000/signup';
 // })
 
-
 document.getElementById('login-btn').addEventListener('click', () => {
     window.location.href = 'http://psych-trade-app.eba-gawxqyim.us-east-1.elasticbeanstalk.com/login';
 })
 
 // error handling for sign up form
+
 document.getElementById('signup-form').addEventListener('submit', async (e) => {
     e.preventDefault(); // Prevent default form submission
 
