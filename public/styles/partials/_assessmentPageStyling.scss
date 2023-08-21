@@ -34,6 +34,16 @@
                     cursor: pointer;
                 }
             }
+
+            .error-message {
+                display: none;
+                color: #ff6347;
+                margin-top: 5px;
+                text-align: right;
+                padding-bottom: 2rem;
+                opacity: 1;
+                transition: opacity 0.5s ease-in-out;
+            }
         }
     }
 }

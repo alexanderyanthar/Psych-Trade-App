@@ -41,9 +41,12 @@
                                 class="fa-solid fa-arrow-left" style="color: #000000;"></i></button>
                         <button class="general-button-styling" type="button" id="nextButton"><i
                                 class="fa-solid fa-arrow-right" style="color: #000000;"></i></button>
+                        
                         <button class="general-button-styling" type="submit" id="submitButton"
                             class="hidden">Submit</button>
                     </div>
+                    <div class="error-message" id="questionError">Please select an option before moving to the next question.</div>
+                    <div class="error-message" id="submissionError">Please answer all questions before submitting.</div>
                 </form>
             </div>
         </main>
@@ -53,6 +56,9 @@
                 const prevButton = document.getElementById('prevButton');
                 const nextButton = document.getElementById('nextButton');
                 const submitButton = document.getElementById('submitButton');
+                const questionError = document.getElementById('questionError');
+                const submissionError = document.getElementById('submissionError');
+                const assessmentForm = document.getElementById('assessmentForm');
                 let currenQuestionIndex = 0;
 
                 const updateButtonState = () => {
@@ -71,6 +77,11 @@
                     });
                 }
 
+                const isQuestionAnswered = (index) => {
+                    const selectedOption = questions[index].querySelector('input:checked');
+                    return !!selectedOption;
+                }
+
                 prevButton.addEventListener('click', () => {
                     currenQuestionIndex--;
                     showQuestion(currenQuestionIndex);
@@ -78,9 +89,37 @@
                 });
 
                 nextButton.addEventListener('click', () => {
-                    currenQuestionIndex++;
-                    showQuestion(currenQuestionIndex);
-                    updateButtonState();
+                    if (isQuestionAnswered(currenQuestionIndex)) {
+                        currenQuestionIndex++;
+                        showQuestion(currenQuestionIndex);
+                        updateButtonState();
+                        questionError.style.display = 'none';
+                    } else {
+                        questionError.style.display = 'block';
+                        setTimeout(() => {
+                            questionError.style.opacity = '0';
+                            setTimeout(() => {
+                                questionError.style.display = 'none'
+                                questionError.style.opacity = '1';
+                            }, 500)
+                        }, 5000);
+                        console.log('Please select an option before moving to the next question');
+                    }
+                });
+
+                assessmentForm.addEventListener('submit', (e) => {
+                    const questionsArray = Array.from(questions);
+                    if (!questionsArray.every((question, index) => isQuestionAnswered(index))) {
+                        e.preventDefault();
+                        submissionError.style.display = 'block';
+                        setTimeout(() => {
+                            submissionError.style.opacity = '0';
+                            setTimeout(() => {
+                                submissionError.style.display = 'none'
+                                submissionError.style.opacity = '1';
+                            }, 500);
+                        }, 5000); // Display error message for 5 seconds
+                    }
                 });
 
                 updateButtonState();

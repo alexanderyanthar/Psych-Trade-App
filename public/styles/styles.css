@@ -1130,6 +1130,15 @@ footer .wrapper .legal-footer-container .legal .legal-list li a:hover {
   border-radius: 10px;
   cursor: pointer;
 }
+.assessment-container .wrapper .assessment-form .error-message {
+  display: none;
+  color: #ff6347;
+  margin-top: 5px;
+  text-align: right;
+  padding-bottom: 2rem;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
 
 .hidden {
   display: none;
