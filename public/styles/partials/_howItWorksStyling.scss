@@ -1,0 +1,82 @@
+@use "./variables" as *;
+
+.how-it-works {
+    height: 90vh;
+    background-color: $neutralGray;
+}
+
+.how-it-works .how-it-works-header {
+    text-align: center;
+}
+
+.how-it-works .full-height {
+    height: 100%;
+}
+
+.how-it-works .half-height {
+    height: 50%;
+}
+
+.how-it-works .carousel .carousel-inner::after {
+    text-align: center;
+    background-color: rgb(112, 112, 112, 0.8);
+    z-index: 1;
+    // color: $richGold;0
+}
+
+.how-it-works .carousel .carousel-inner .carousel-item-1 {
+    background-image: url("../assets/take-the-assessment-blue.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.how-it-works .carousel .carousel-inner .carousel-item-2 {
+    background-image: url("../assets/analysis-and-recommendations-blue.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.how-it-works .carousel .carousel-inner .carousel-item-3 {
+    background-image: url("../assets/empower-your-trading-blue.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+
+.how-it-works .carousel .carousel-inner .carousel-item .background-filter {
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+
+.how-it-works .carousel .carousel-inner .carousel-item .carousel-slide-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    h3 {
+        position: absolute;
+        top: 25%;
+    }
+}
+
+.how-it-works .carousel .carousel-inner .carousel-item .carousel-slide-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    p {
+        position: absolute;
+        bottom: 40%;
+    }
+}
+
+.how-it-works .carousel-control-next .carousel-control-next-icon {
+    color: $richGold;
+}

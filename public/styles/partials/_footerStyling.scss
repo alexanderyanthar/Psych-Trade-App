@@ -1,0 +1,126 @@
+@use "./variables" as *;
+
+footer {
+    height: 45vh;
+    background-color: $deepBlue;
+    border-top: 10px solid $cleanWhite;
+    color: $richGold;
+}
+
+footer .wrapper {
+    height: 100%;
+}
+
+footer .wrapper .site-footer-container {
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    height: 80%;
+    padding-top: 2rem;
+
+    .footer-nav-container {
+        display: flex;
+        justify-content: space-between;
+        // align-items: center;
+        width: 70%;
+
+        .company,
+        .resources,
+        .attributes {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .company,
+        .resources {
+            height: 75%;
+        }
+
+        .attributes {
+            height: 62%;
+        }
+
+        ul {
+            list-style: none;
+
+            li a {
+                text-decoration: none;
+                color: $cleanWhite;
+                transition: 0.2s ease-out;
+            }
+
+            li a:hover {
+                color: $richGold;
+            }
+        }
+    }
+
+    .logo-icon-container {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        width: 25%;
+
+        .logo {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .logo-icon-container .icon-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        width: 100%;
+
+        li a {
+            text-decoration: none;
+            color: $cleanWhite;
+            transition: 0.2s ease-out;
+        }
+
+        li a:hover {
+            color: $richGold;
+        }
+    }
+}
+
+footer .wrapper .legal-footer-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 5px solid $richGold;
+
+
+    .copyright {
+        width: 25%;
+        font-weight: 100;
+    }
+
+    .legal {
+        width: 100%;
+    }
+
+    .legal .legal-list {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+
+        li {
+            padding: 0 1rem;
+        }
+
+        li a {
+            text-decoration: none;
+            color: $cleanWhite;
+            transition: 0.2s ease-out;
+        }
+
+        li a:hover {
+            color: $richGold;
+        }
+    }
+}

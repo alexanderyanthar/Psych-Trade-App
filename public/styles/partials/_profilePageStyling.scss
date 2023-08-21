@@ -1,0 +1,89 @@
+@use './variables' as *;
+
+.profile-page-container {
+    background-color: $deepBlue;
+    color: white;
+
+    .wrapper {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .welcome-text {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .logout-button {
+            margin: 1rem 0;
+            background-color: $richGold;
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            color: black;
+            align-self: flex-end;
+        }
+
+        .analysis-container {
+            margin-top: 2rem;
+
+            .preferred-analysis-title {
+                font-size: 2rem;
+            }
+
+            .preferred-analysis-title span {
+                font-weight: 700;
+                transition: color 0.3s ease;
+            }
+
+            .preferred-analysis-title span:hover {
+                cursor: pointer;
+                color: rgb(255, 199, 44, 0.8);
+            }
+        }
+
+        .analysis-container .analysis-text-and-img-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+
+            img {
+                margin-left: 1rem;
+                width: 100%;
+            }
+
+            p {
+                width: 80%;
+            }
+        }
+
+        .take-assessment-link {
+            color: $cleanWhite;
+            font-size: 2rem;
+            margin: 1rem 0;
+            transition: color 0.3s ease;
+        }
+
+        .take-assessment-link:hover {
+            color: $richGold;
+        }
+    }
+}
+
+@media (max-width: $tablets) {
+    .analysis-container .analysis-text-and-img-container {
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            margin-top: 2rem;
+            margin-left: 0;
+        }
+
+        p {
+            width: 100%;
+        }
+    }
+}

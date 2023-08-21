@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&family=Roboto:wght@300;500&display=swap"
+        rel="stylesheet">
+
+    <!-- font awesome icons -->
+
+    <script src="https://kit.fontawesome.com/84bf206d2c.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+
+<body>
+    <%- include ('header.ejs') %>
+        <div class="form-container">
+            <h1>Log in</h1>
+            <form class="login-form" id="login-form" action="/login" method="POST">
+                <label for="username"></label>
+                <input type="text" id="username" name="username" required>
+                <br>
+                <label for="passsword"></label>
+                <input type="password" id="password" name="password" required>
+                <button class="login-button" type="submit">Log In</button>
+            </form>
+        </div>
+        <%- include ('footer.ejs') %>
+            <script src="./scripts/app.js"></script>
+</body>
+
+</html>

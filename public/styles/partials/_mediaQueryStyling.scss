@@ -1,0 +1,351 @@
+@use './variables' as *;
+
+
+
+@media (max-width: $desktops) {
+    // feature section
+
+    .features {
+        height: auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+        .psych-assessments,
+        .personalized-strategies {
+            width: 47%;
+        }
+
+        .risk-management-techniques {
+            margin-top: 1rem;
+            width: 97%;
+            height: 39vh;
+        }
+
+        .feature-container .feature-description {
+            padding: 0.75rem 1rem;
+        }
+
+        .feature-container h3 {
+            bottom: 16%;
+        }
+    }
+
+    // how it works section
+    .how-it-works {
+        height: 80vh;
+
+        .carousel .carousel-inner .carousel-item,
+        .carousel-slide-text-p {
+            text-align: center;
+        }
+    }
+
+    // call to action section
+    .call-to-action .wrapper {
+
+        .call-to-action-text {
+            width: 50%;
+        }
+
+        .call-to-action-buttons {
+            width: 50%;
+            justify-content: center;
+        }
+
+        .call-to-action-buttons .call-to-action-btn:first-child {
+            margin-right: 1rem;
+        }
+
+    }
+
+    // footer 
+    footer .wrapper {
+        .site-footer-container {
+            height: 70%;
+        }
+
+        .legal-footer-container {
+            margin-top: 2rem;
+        }
+    }
+
+}
+
+@media (max-width: $laptops) {
+
+    // footer
+    footer {
+        height: auto;
+
+        .wrapper .site-footer-container {
+            flex-direction: column;
+            align-items: center;
+
+            .logo-icon-container {
+                align-self: flex-start;
+            }
+
+            .footer-nav-container {
+                width: 100%;
+                margin-top: 2rem;
+            }
+
+            .footer-nav-container .company,
+            .footer-nav-container .resources {
+                height: 100%;
+                margin-right: 2rem;
+            }
+
+            .footer-nav-container .company .footer-heading-ul,
+            .footer-nav-container .resources .footer-heading-ul,
+            .footer-nav-container .attributes .footer-heading-ul {
+                padding-bottom: 1rem;
+            }
+        }
+
+        .wrapper .legal-footer-container {
+            padding: 1rem 0;
+        }
+
+
+    }
+}
+
+@media (max-width: $tablets) {
+
+    header .header-hero-section {
+        height: 88%;
+
+        .header-text {
+            width: 100%;
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .company-name {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+
+        }
+    }
+
+    header nav {
+        text-align: right;
+        position: relative;
+
+        .header-nav {
+            justify-content: space-around;
+            position: absolute;
+            border: none;
+            flex-direction: column;
+            align-items: center;
+            height: 90vh;
+            background-color: $deepBlue;
+            width: 100%;
+            left: 100%;
+            transition: left 0.3s ease;
+        }
+
+        .header-nav.active {
+            left: 0%;
+        }
+    }
+
+    header nav .hamburger-menu-container {
+        background-color: $deepBlue;
+        display: block;
+
+        .ham {
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            transition: transform 400ms;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .hamRotate.active {
+            transform: rotate(45deg);
+        }
+
+        .line {
+            fill: none;
+            transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+            stroke: #000;
+            stroke-width: 5.5;
+            stroke-linecap: round;
+        }
+
+        .ham1 .top {
+            stroke-dasharray: 40 139;
+        }
+
+        .ham1 .bottom {
+            stroke-dasharray: 40 180;
+        }
+
+        .ham1.active .top {
+            stroke-dashoffset: -98px;
+        }
+
+        .ham1.active .bottom {
+            stroke-dashoffset: -138px;
+        }
+    }
+
+    // features section
+    .features {
+        padding: 2rem 0;
+
+        .psych-assessments,
+        .personalized-strategies {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .risk-management-techniques {
+            margin-top: 0;
+        }
+
+        .feature-container .feature-description {
+            padding: 0 0;
+        }
+
+        .psych-assessments {
+            margin-right: 0;
+        }
+
+        .feature-container h3 {
+            font-size: 1.5rem;
+            width: 90%;
+        }
+
+        .feature-container.active h3 {
+            bottom: 50%
+        }
+
+        .feature-container .feature-description {
+            padding: 0 1rem;
+        }
+
+        .feature-container.active .feature-description {
+            top: 60%;
+        }
+    }
+
+    // how it works section
+    .how-it-works .carousel .carousel-inner .carousel-item {
+        .carousel-slide-title h3 {
+            padding: 0 1rem;
+            font-size: 1.25rem;
+        }
+
+        .carousel-slide-text p {
+            padding: 0 1rem;
+        }
+    }
+
+    // call to action section 
+    .call-to-action .wrapper {
+        height: auto;
+        flex-direction: column;
+        padding: 2rem 0;
+
+        .call-to-action-text {
+            width: 100%;
+            font-size: 1.25rem;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .call-to-action-buttons {
+            width: 100%;
+        }
+    }
+
+    // footer
+
+    footer .wrapper {
+
+        .site-footer-container .logo-icon-container {
+            width: 50%;
+        }
+
+        .site-footer-container .footer-nav-container {
+            flex-direction: column;
+
+            .company,
+            .resources {
+                margin-bottom: 2rem;
+            }
+        }
+
+        .legal-footer-container {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        .legal-footer-container .legal {
+            font-size: 0.65rem;
+            padding: 1rem 0;
+        }
+
+
+
+
+    }
+}
+
+// phones
+
+@media(max-width: $phones) {
+
+    // header
+    header .header-hero-section {
+        .header-text {
+            .company-name {
+                font-size: 2rem;
+            }
+
+            .h2 {
+                font-size: 1rem;
+            }
+        }
+    }
+
+
+    // features section
+    .features {
+        .feature-container {
+            h3 {
+                font-size: 1.25rem;
+            }
+
+            .feature-description {
+                font-size: 0.8rem;
+            }
+        }
+
+        .feature-container.active h3 {
+            bottom: 60%;
+        }
+
+        .feature-container.active .feature-description {
+            top: 50%;
+        }
+    }
+
+    // how it works
+
+    .how-it-works .carousel .carousel-inner .carousel-item {
+        .carousel-slide-text p {
+            bottom: 30%;
+        }
+    }
+}

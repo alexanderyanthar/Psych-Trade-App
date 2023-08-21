@@ -1,0 +1,43 @@
+@use './variables' as *;
+
+.assessment-container {
+    background-color: $deepBlue;
+    color: $cleanWhite;
+
+    .wrapper {
+        .assessment-title {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .assessment-form {
+            .question-container {
+                display: flex;
+                flex-direction: column;
+
+                .input-container {
+                    margin: 2rem 0;
+                }
+            }
+
+            .button-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 3rem;
+
+                .general-button-styling {
+                    padding: 1rem 2rem;
+                    background-color: $richGold;
+                    border: none;
+                    border-radius: 10px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}
