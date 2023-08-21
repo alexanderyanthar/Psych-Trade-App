@@ -113,32 +113,74 @@ app.get('/', (req, res) => {
 });
 
 app.get('/signup', (req, res) => {
-    res.render('signup');
+    let errorMessage = '';
+    res.render('signup', { errorMessage });
 });
+
+// app.post('/signup', async (req, res) => {
+//     try {
+//         const { username, password } = req.body;
+
+//         const existingUser = await User.findOne({ username });
+//         if (existingUser) {
+//             return res.status(400).json({ message: 'Username already taken' });
+//         }
+
+//         const hashedPassword = await bcrypt.hash(password, 10); // 10 is the number of salt rounds
+
+//         const newUser = new User({ username, password: hashedPassword });
+//         await newUser.save();
+
+//         const token = jwt.sign({ userId: newUser._id }, 'your-secret-key', { expiresIn: '1h' });
+
+//         res.cookie('jwt', token, { httpOnly: true, maxAge: 3600000 }); // Set the token as a cookie
+
+//         // Redirect to the profile page after successful login
+//         res.redirect('/profile');
+//     } catch (error) {
+//         console.error('Error creating user:', error);
+//         res.status(500).json({ message: 'Internal Server Error' });
+//     }
+// });
 
 app.post('/signup', async (req, res) => {
     try {
         const { username, password } = req.body;
+        let errorMessage = '';
 
-        const existingUser = await User.findOne({ username });
-        if (existingUser) {
-            return res.status(400).json({ message: 'Username already taken' });
+        // Check username validity
+        if (username.length < 6 || !/^[a-zA-Z0-9]+$/.test(username)) {
+            errorMessage = 'Invalid username or password';
+        } else if (password.length < 8 || !/(?=.*[0-9])(?=.*[@#$%^&+=]).*$/.test(password)) {
+            errorMessage = 'Invalid username or password';
         }
 
-        const hashedPassword = await bcrypt.hash(password, 10); // 10 is the number of salt rounds
 
+        // If there's an error message, render the signup page with the error message
+        if (errorMessage) {
+            return res.status(400).render('signup', { errorMessage });
+        }
+
+        // Continue with signup process
+        const existingUser = await User.findOne({ username });
+        if (existingUser) {
+            errorMessage = 'Username already taken';
+            return res.status(400).render('signup', { errorMessage });
+        }
+
+        const hashedPassword = await bcrypt.hash(password, 10);
         const newUser = new User({ username, password: hashedPassword });
         await newUser.save();
 
         const token = jwt.sign({ userId: newUser._id }, 'your-secret-key', { expiresIn: '1h' });
 
-        res.cookie('jwt', token, { httpOnly: true, maxAge: 3600000 }); // Set the token as a cookie
+        res.cookie('jwt', token, { httpOnly: true, maxAge: 3600000 });
 
-        // Redirect to the profile page after successful login
+        // Redirect to the profile page after successful signup
         res.redirect('/profile');
     } catch (error) {
         console.error('Error creating user:', error);
-        res.status(500).json({ message: 'Internal Server Error' });
+        res.status(500).json({ errorMessage: 'Internal Server Error' });
     }
 });
 

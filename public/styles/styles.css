@@ -484,7 +484,7 @@ header .header-hero-section .header-text p {
 
 .how-it-works {
   height: 90vh;
-  background-color: rgb(112, 112, 112);
+  background-color: #707070;
 }
 
 .how-it-works .how-it-works-header {
@@ -944,6 +944,28 @@ footer .wrapper .legal-footer-container .legal .legal-list li a:hover {
   margin: 1rem;
   font-size: 3rem;
 }
+.form-container .info-icon {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.form-container .info-icon .info-bubble {
+  position: absolute;
+  top: 30px;
+  left: -10px;
+  display: none;
+  width: 400px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  color: #002a5c;
+}
+.form-container .info-icon:hover .info-bubble {
+  display: block;
+}
 .form-container .signup-form,
 .form-container .login-form {
   display: flex;
@@ -972,6 +994,9 @@ footer .wrapper .legal-footer-container .legal .legal-list li a:hover {
   width: 50%;
   border-radius: 10px;
   border: none;
+}
+.form-container .error-message {
+  color: #ff6347;
 }
 
 @media (max-width: 768px) {
