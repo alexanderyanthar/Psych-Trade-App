@@ -10,6 +10,15 @@ const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
 const { Schema } = require('mongoose');
 require('dotenv').config()
+const crypto = require('crypto');
+
+const generateRandomSecretKey = (length) => {
+    const randomBytes = crypto.randomBytes(length);
+    return randomBytes.toString('base64');
+};
+
+const secretKey = generateRandomSecretKey(32); // Generate a 256-bit (32-byte) secret key
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -172,7 +181,7 @@ app.post('/signup', async (req, res) => {
         const newUser = new User({ username, password: hashedPassword });
         await newUser.save();
 
-        const token = jwt.sign({ userId: newUser._id }, 'your-secret-key', { expiresIn: '1h' });
+        const token = jwt.sign({ userId: newUser._id }, secretKey, { expiresIn: '1h' });
 
         res.cookie('jwt', token, { httpOnly: true, maxAge: 3600000 });
 
@@ -185,25 +194,31 @@ app.post('/signup', async (req, res) => {
 });
 
 app.get('/login', (req, res) => {
-    res.render('login');
+    let errorMessage = '';
+    res.render('login', { errorMessage });
 });
 
 app.post('/login', async (req, res) => {
     try {
         const { username, password } = req.body;
+        let errorMessage = '';
 
         const user = await User.findOne({ username });
         if (!user) {
-            return res.status(401).json({ message: 'Authentication failed' });
+            errorMessage = 'Invalid username or password';
         }
 
         // Compare the entered password with the stored hashed password
         const passwordMatch = await bcrypt.compare(password, user.password);
         if (!passwordMatch) {
-            return res.status(401).json({ message: 'Authentication failed' });
+            errorMessage = 'Invalid username or password';
         }
 
-        const token = jwt.sign({ userId: user._id }, 'your-secret-key', { expiresIn: '1h' });
+        if (errorMessage) {
+            return res.status(400).render('login', { errorMessage });
+        }
+
+        const token = jwt.sign({ userId: newUser._id }, secretKey, { expiresIn: '1h' });
 
         res.cookie('jwt', token, { httpOnly: true, maxAge: 3600000 });
 
@@ -263,7 +278,7 @@ app.get('/assessment', async (req, res) => {
             return res.status(401).json({ message: 'Authentication required '});
         }
 
-        jwt.verify(token, 'your-secret-key', async (err, decodedToken) => {
+        jwt.verify(token, secretKey, async (err, decodedToken) => {
             if (err) {
                 return res.status(403).json({ message: 'Invalid token'});
             }
@@ -289,7 +304,7 @@ app.post('/submitAssessment', async (req, res) => {
             return res.status(401).json({ message: 'Authenticaion Required' });
         }
 
-        jwt.verify(token, 'your-secret-key', async (err, decodedToken) => {
+        jwt.verify(token, secretKey, async (err, decodedToken) => {
             if (err) {
                 return res.status(403).json({ message: 'Invalid token' });
             }
