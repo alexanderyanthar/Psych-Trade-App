@@ -218,7 +218,7 @@ app.post('/login', async (req, res) => {
             return res.status(400).render('login', { errorMessage });
         }
 
-        const token = jwt.sign({ userId: newUser._id }, secretKey, { expiresIn: '1h' });
+        const token = jwt.sign({ userId: user._id }, secretKey, { expiresIn: '1h' });
 
         res.cookie('jwt', token, { httpOnly: true, maxAge: 3600000 });
 
@@ -239,7 +239,7 @@ app.get('/profile', (req, res) => {
             return res.status(401).json({ message: 'Authentication required' });
         }
 
-        jwt.verify(token, 'your-secret-key', async (err, decodedToken) => {
+        jwt.verify(token, secretKey, async (err, decodedToken) => {
             if (err) {
                 return res.status(403).json({ message: 'Invalid token' });
             }
