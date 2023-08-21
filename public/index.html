@@ -30,7 +30,7 @@
         <div class="background-img-container"></div>
         <nav>
             <div class="hamburger-menu-container">
-                <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80">
+                <svg role="presentation" class="ham hamRotate ham1" viewBox="0 0 100 100" width="80">
                     <path class="line top"
                         d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
                     <path class="line middle" d="m 30,50 h 40" />
@@ -39,10 +39,10 @@
                 </svg>
             </div>
             <ul class="header-nav">
-                <li><a class="header-link" href="#home">Home</a></li>
-                <li><a class="header-link" href="#features">Features</a></li>
-                <li><a class="header-link" href="#how-it-works">How It Works</a></li>
-                <li><a class="header-link" href="#contact">Contact</a></li>
+                <li><a class="header-link" href="#home" role="button">Home</a></li>
+                <li><a class="header-link" href="#features" role="button">features</a></li>
+                <li><a class="header-link" href="#how-it-works" role="button">How It Works</a></li>
+                <li><a class="header-link" href="#contact" role="button">Contact</a></li>
             </ul>
         </nav>
 
@@ -152,18 +152,6 @@
             <div class="wrapper">
                 <!-- Make this a form section to sign up today -->
                 <h3 class="call-to-action-text">Start Optimizing Your Trades Today!</h3>
-                <!-- <form id="signup-form" class="signup-form">
-
-                    <fieldset class="call-to-action-form-container">
-                        <label for="username"></label>
-                        <input type="email" id="username" class="email" name="username" size="30" placeholder="Email" required>
-        
-                        <label for="password"></label>
-                        <input type="password" class="password" id="password" name="password" minlength="8" placeholder="Create password" required>
-        
-                        
-                    </>
-                </form> -->
                 <div class="call-to-action-buttons">
                     <button id="signup-Button" class="call-to-action-btn" type="submit">Sign up</button>
                     <button id="login-btn" class="call-to-action-btn" type="submit">Log In</button>
@@ -182,11 +170,11 @@
                     <h2 class="logo footer-heading">PsychTrade</h2>
                     <ul class="icon-list">
                         <li>
-                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#" role="button"><span class="sr-only">facebook</span><i class="fa-brands fa-facebook"></i></a>
                         </li>
-                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#" role="button"><span class="sr-only">instagram</span><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#" role="button"><span class="sr-only">linked in</span><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="#" role="button"><span class="sr-only">twiiter</span><i class="fa-brands fa-twitter"></i></a></li>
                     </ul>
                 </div>
                 <div class="footer-nav-container">
@@ -194,28 +182,28 @@
                     <nav class="company">
                         <h4 class="footer-heading-ul">Company</h4>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Psychology Tests</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="#" role="button">About Us</a></li>
+                            <li><a href="#" role="button">Services</a></li>
+                            <li><a href="#" role="button">Psychology Tests</a></li>
+                            <li><a href="#" role="button">Contact</a></li>
                         </ul>
                     </nav>
                     <nav class="resources">
                         <h4 class="footer-heading-ul">Resources</h4>
                         <ul>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">FAQs</a></li>
-                            <li><a href="#">Support</a></li>
-                            <li><a href="#">Currency Tracker</a></li>
+                            <li><a href="#" role="button">Blog</a></li>
+                            <li><a href="#" role="button">FAQs</a></li>
+                            <li><a href="#" role="button">Support</a></li>
+                            <li><a href="#" role="button">Currency Tracker</a></li>
                         </ul>
                     </nav>
 
                     <nav class="attributes">
                         <h4 class="footer-heading-ul">Attributions</h4>
                         <ul>
-                            <li><a href="https://storyset.com/data">Data illustrations by Storyset</a></li>
-                            <li><a href="https://storyset.com/education">Education illustrations by Storyset</a></li>
-                            <li><a href="https://storyset.com/data">Data illustrations by Storyset</a></li>
+                            <li><a href="https://storyset.com/data" role="button">Data illustrations by Storyset</a></li>
+                            <li><a href="https://storyset.com/education" role="button">Education illustrations by Storyset</a></li>
+                            <li><a href="https://storyset.com/data" role="button">Data illustrations by Storyset</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -225,9 +213,9 @@
                 <p class="copyright">@psychtrade 2023</p>
                 <nav class="legal">
                     <ul class="legal-list">
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#" role="button">Terms & Conditions</a></li>
+                        <li><a href="#" role="button">Privacy Policy</a></li>
+                        <li><a href="#" role="button">Cookie Policy</a></li>
                     </ul>
                 </nav>
             </div>
