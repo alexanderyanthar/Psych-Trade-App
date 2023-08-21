@@ -8,7 +8,6 @@ featureContainer.forEach((container) => {
     })
     container.addEventListener('mouseout', (e) => {
         container.classList.remove('active');
-        console.log(e.target);
     })
 })
 

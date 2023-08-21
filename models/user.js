@@ -10,9 +10,9 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    // assessments: [{ type: Schema.Types.ObjectId, ref: 'AssessmentAnswer' }]
+    assessments: [{ type: Schema.Types.ObjectId, ref: 'AssessmentAnswer' }]
 });
 
 const User = mongoose.model('User', userSchema);
 
-module.exports = User;
+module.exports = { User } ;
