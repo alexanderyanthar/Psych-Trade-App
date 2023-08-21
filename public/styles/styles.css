@@ -584,6 +584,9 @@ header .header-hero-section .header-text p {
   transition: background-color 0.2s ease;
   padding: 1rem;
 }
+.call-to-action .wrapper .call-to-action-buttons .call-to-action-btn:focus {
+  outline: 2px solid #fff;
+}
 
 footer {
   height: 45vh;
@@ -963,7 +966,8 @@ footer .wrapper .legal-footer-container .legal .legal-list li a:hover {
   z-index: 1;
   color: #002a5c;
 }
-.form-container .info-icon:hover .info-bubble {
+.form-container .info-icon:hover .info-bubble,
+.form-container .info-icon:focus .info-bubble {
   display: block;
 }
 .form-container .signup-form,

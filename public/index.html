@@ -26,6 +26,7 @@
 </head>
 
 <body>
+    <a href="#main-content" class="sr-only">Skip to Content</a>
     <header>
         <div class="background-img-container"></div>
         <nav>
@@ -55,28 +56,34 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="wrapper features" id="features">
             <!-- Outline key features of platform emphasizing use of psychological tests and personalized analysis -->
             <!-- Make three divs to showcase each feature -->
             <div class="psych-assessments feature-container">
                 <div class="background-cover">
-                    <h3>Psychological Assessments</h3>
+                    <h3 role="heading" aria-level="1">Psychological Assessments</h3>
                     <p class="feature-description">Gain deep insights into your trading personality with our
+                        scientifically designed tests.</p>
+                    <p class="sr-only" aria-level="2">Gain deep insights into your trading personality with our
                         scientifically designed tests.</p>
                 </div>
             </div>
             <div class="personalized-strategies feature-container">
                 <div class="background-cover">
-                    <h3>Personalized Strategies</h3>
-                    <p class="feature-description">Get tailored recommendations based on your psychological profile and
+                    <h3 role="heading" aria-level="1">Personalized Strategies</h3>
+                    <p class="feature-description" aria-level="2">Get tailored recommendations based on your psychological profile and
+                        trading goals.</p>
+                    <p class="feature-description sr-only" aria-level="2">Get tailored recommendations based on your psychological profile and
                         trading goals.</p>
                 </div>
             </div>
             <div class="risk-management-techniques feature-container">
                 <div class="background-cover">
-                    <h3>Risk Management Techniques</h3>
-                    <p class="feature-description">Learn effective strategies to handle stress, emotions, and maintain
+                    <h3 role="heading" aria-level="1">Risk Management Techniques</h3>
+                    <p aria-level="2" class="feature-description">Learn effective strategies to handle stress, emotions, and maintain
+                        discipline in your trades.</p>
+                    <p aria-level="2" class="feature-description sr-only">Learn effective strategies to handle stress, emotions, and maintain
                         discipline in your trades.</p>
                 </div>
             </div>
@@ -172,9 +179,9 @@
                         <li>
                             <a href="#" role="button"><span class="sr-only">facebook</span><i class="fa-brands fa-facebook"></i></a>
                         </li>
-                        <li><a href="#" role="button"><span class="sr-only">instagram</span><i class="fa-brands fa-instagram"></i></a></li>
-                        <li><a href="#" role="button"><span class="sr-only">linked in</span><i class="fa-brands fa-linkedin"></i></a></li>
-                        <li><a href="#" role="button"><span class="sr-only">twiiter</span><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#" role="button"><span class="sr-only">instagram</span><i role="presentation" class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#" role="button"><span class="sr-only">linked in</span><i role="presentation" class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="#" role="button"><span class="sr-only">twiiter</span><i role="presentation" class="fa-brands fa-twitter"></i></a></li>
                     </ul>
                 </div>
                 <div class="footer-nav-container">
@@ -210,7 +217,7 @@
             </div>
             <div class="legal-footer-container">
                 <!-- To hold copyright and terms of service stuff -->
-                <p class="copyright">@psychtrade 2023</p>
+                <p class="copyright" role="contentinfo">@psychtrade 2023</p>
                 <nav class="legal">
                     <ul class="legal-list">
                         <li><a href="#" role="button">Terms & Conditions</a></li>

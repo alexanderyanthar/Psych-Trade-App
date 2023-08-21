@@ -46,7 +46,8 @@
         color: $deepBlue;
     }
 
-    .info-icon:hover .info-bubble {
+    .info-icon:hover .info-bubble,
+    .info-icon:focus .info-bubble {
         display: block;
     }
 

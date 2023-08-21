@@ -29,4 +29,10 @@
         transition: background-color 0.2s ease;
         padding: 1rem;
     }
+
+    .call-to-action-buttons .call-to-action-btn:focus {
+       outline: 2px solid $cleanWhite;
+    }
+
+
 }
