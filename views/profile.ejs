@@ -117,7 +117,9 @@
                         </div>
                         <% } %>
                     <% } %>
-                <a class="logout-button" href="/logout">Logout</a>
+                    <form class="logout-form" action="/logout" method="POST">
+                        <button class="logout-button" type="submit">Logout</button>
+                    </form>
         </div>
     </main>
         <%- include ('footer.ejs') %>

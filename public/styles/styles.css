@@ -1010,7 +1010,12 @@ footer .wrapper .legal-footer-container .legal .legal-list li a:hover {
   text-align: center;
   margin-top: 1rem;
 }
-.profile-page-container .wrapper .logout-button {
+.profile-page-container .wrapper .logout-form {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.profile-page-container .wrapper form .logout-button {
   margin: 1rem 0;
   background-color: #ffc72c;
   padding: 1rem;
