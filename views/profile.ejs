@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&family=Roboto:wght@300;500&display=swap"
+        rel="stylesheet">
+
+    <!-- font awesome icons -->
+
+    <script src="https://kit.fontawesome.com/84bf206d2c.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+    <%- include ('header.ejs') %>
+    <main class="profile-page-container">
+        <div class="wrapper">
+            <h1 class="welcome-text">Welcome! <%= username %>
+            </h1>
+
+            <% if (!hasTakenAssessment) { %>
+                <a class="take-assessment-link" href="/assessment">Take Assessment!</a>
+                <img src="./assets/take-assessment-img.svg" alt="">
+                <% } else { %>
+                    <% if (userPreference==='fundamental' ) { %>
+                        <div class="analysis-container">
+                            <p class="preferred-analysis-title">Your Preferred Analysis Type: <span>
+                                    <%= userPreference.charAt(0).toUpperCase() + userPreference.slice(1) %> Analysis
+                                </span>
+                            </p>
+                            <div class="analysis-text-and-img-container">
+                                <p>Employing intricate economic data to inform trading decisions, fundamental
+                                    analysis leans towards medium to long-term
+                                    strategies. Its practitioners exhibit patience, meticulousness, and a propensity
+                                    for in-depth research, embodying a
+                                    personality marked by careful consideration and thorough evaluation.</p>
+                                <img src="./assets/analysis-type-fundamental.svg" alt="document read over avatar">
+                            </div>
+                        </div>
+                    <% } else if (userPreference==='technical' ) { %>
+                        <div class="analysis-container">
+                            <p class="preferred-analysis-title">Your preferred Analysis Type: <span>
+                                    <%= userPreference.charAt(0).toUpperCase() + userPreference.slice(1) %>
+                                        Analysis
+                                </span></p>
+                            <div class="analysis-text-and-img-container">
+                                <p>Technical analysis revolves around price dynamics and indicators like moving
+                                    averages and chart patterns, catering to a
+                                    broad range of durations, from short to long term. This approach is favored
+                                    by individuals who value efficiency and seek
+                                    insights directly from data, appealing to pragmatic minds that make
+                                    well-informed decisions.</p>
+                                <img src="./assets/analysis-type-technical.svg" alt="growth chart avatar">
+                            </div>
+                        </div>
+                    <% } else if (userPreference==='hybrid' ) { %>
+                        <div class="analysis-container">
+                            <p class="preferred-analysis-title">Your preferred Analysis Type: <span>
+                                    <%= userPreference.charAt(0).toUpperCase() + userPreference.slice(1) %>
+                                        Analysis
+                                </span></p>
+                            <div class="analysis-text-and-img-container">
+                                <p>Combining the strengths of both fundamental and technical approaches,
+                                    hybrid analysis integrates news awareness with
+                                    chart analysis. Spanning various timeframes, hybrid analysis enthusiasts
+                                    are known for their balanced perspective and
+                                    diplomatic decision-making. This strategy attracts those who appreciate
+                                    the synergy between meticulous research and
+                                    dynamic market insights.</p>
+                                <img src="./assets/analysis-type-hybrid-gold.svg"
+                                    alt="data analysis avatar">
+                            </div>
+                        </div>
+                    <% } else if (userPreference==='hybrid-fundamental' ) { %>
+                        <div class="analysis-container">
+                            <p class="preferred-analysis-title">Your preferred Analysis Type: <span>
+                                    <%= userPreference.charAt(0).toUpperCase() + userPreference.slice(1)
+                                        %> Analysis
+                                </span></p>
+                            <div class="analysis-text-and-img-container">
+                                <p>Centered on the reliability of fundamental data, this method leans
+                                    towards longer-term trading strategies. Practitioners
+                                    of hybrid-fundamental analysis are characterized by their logic,
+                                    grounded nature, and comprehensive understanding of
+                                    various trading paradigms. Their decisions are guided by analytical
+                                    reasoning and a holistic view of market dynamics.</p>
+                                <img src="./assets/analysis-type-hybrid-fundamental-gold.svg"
+                                    alt="hybrid fundamental avatar">
+                            </div>
+                        </div>
+                    <% } else if (userPreference==='hybrid-technical' ) { %>
+                        <div class="analysis-container">
+                            <p class="preferred-analysis-title">Your preferred Analysis Type: <span>
+                                    <%= userPreference.charAt(0).toUpperCase() +
+                                        userPreference.slice(1) %> Analysis
+                                </span></p>
+                            <div class="analysis-text-and-img-container">
+                                <p>Acknowledging multifaceted influences on prices, hybrid-technical
+                                    analysis emphasizes agile decision-making over
+                                    prolonged contemplation. This approach spans short to
+                                    medium-term trading, attracting astute individuals who deftly
+                                    decode nuanced market cues. The practitioners possess a keen
+                                    intellect and excel at synthesizing insights for prompt,
+                                    well-timed actions.</p>
+                                <img src="./assets/analysis-type-hybrid-technical-gold.svg"
+                                    alt="hybrid technical avatar">
+                            </div>
+                        </div>
+                        <% } %>
+                    <% } %>
+                <a class="logout-button" href="/logout">Logout</a>
+        </div>
+    </main>
+        <%- include ('footer.ejs') %>
+</body>
+
+</html>

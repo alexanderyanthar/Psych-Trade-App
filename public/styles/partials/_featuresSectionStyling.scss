@@ -1,0 +1,98 @@
+@use "./variables" as *;
+
+.features {
+    background-color: $cleanWhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+    height: 90vh;
+
+    .feature-container {
+        background-color: rgb(112, 112, 112, 0.5);
+        position: relative;
+        border-radius: 10px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+        h3 {
+            position: absolute;
+            bottom: 10%;
+            font-size: 2rem;
+            width: 50%;
+            margin-left: 1rem;
+            transition: bottom 0.3s ease;
+        }
+
+        .feature-description {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transition: top 0.3s, opacity 0.3s;
+            padding: 0 1rem;
+        }
+    }
+
+    .feature-container.active {
+        background-color: $deepBlue;
+        color: rgb(255, 199, 44, 0.8);
+    }
+
+    .feature-container.active h3 {
+        bottom: 40%;
+    }
+
+    .feature-container.active .feature-description {
+        top: 70%;
+        opacity: 1;
+    }
+
+    .psych-assessments .background-cover.active,
+    .risk-management-techniques .background-cover.active,
+    .personalized-strategies .background-cover.active {
+        background-color: rgb(0, 42, 92, 0.9);
+    }
+
+
+    .psych-assessments,
+    .personalized-strategies {
+        width: 49%;
+        height: 40vh;
+    }
+
+    .personalized-strategies {
+        background-image: url("../assets/personalized-strategies.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .psych-assessments {
+        margin-right: 1rem;
+        background-image: url("../assets/psych-assessments.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .psych-assessments .background-cover,
+    .risk-management-techniques .background-cover,
+    .personalized-strategies .background-cover {
+        height: 100%;
+        border-radius: 10px;
+        background-color: rgb(112, 112, 112, 0.3);
+        transition: background-color 0.3s ease;
+    }
+
+    .risk-management-techniques {
+        margin-top: -1rem;
+        width: 100%;
+        height: 40vh;
+        background-image: url("../assets/risk-management-techniques.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+}

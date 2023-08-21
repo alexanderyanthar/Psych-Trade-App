@@ -1,0 +1,32 @@
+@use "./variables" as *;
+
+.call-to-action {
+    background-color: $deepBlue;
+}
+
+.call-to-action .wrapper {
+    height: 30vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+        font-weight: 800;
+        color: $richGold;
+    }
+
+    .call-to-action-buttons {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 25%;
+    }
+
+    .call-to-action-buttons .call-to-action-btn {
+        border-style: none;
+        background-color: $richGold;
+        border-radius: 5px;
+        transition: background-color 0.2s ease;
+        padding: 1rem;
+    }
+}

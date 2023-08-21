@@ -1,0 +1,87 @@
+@use './variables' as *;
+
+// Sign up page styling
+.signup-header {
+    height: 10vh;
+
+    nav .header-nav {
+        position: relative;
+
+    }
+}
+
+.form-container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $deepBlue;
+    padding: 1rem 0;
+
+    h1 {
+        color: $richGold;
+        margin: 1rem;
+        font-size: 3rem;
+    }
+
+    .signup-form,
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        align-items: center;
+
+        .signup-button,
+        .login-button {
+            margin: 1rem 0;
+            width: 15%;
+            background-color: $richGold;
+            padding: 1rem 0;
+            border: none;
+            border-radius: 10px;
+        }
+
+        #username,
+        #password {
+            margin: 1rem 0;
+            padding: 1rem;
+            width: 50%;
+            border-radius: 10px;
+            border: none;
+        }
+    }
+}
+
+// media queries for sign up page
+
+@media (max-width: $tablets) {
+    .form-container {
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        .signup-form .signup-button,
+        .login-form .login-button {
+            width: 25%;
+        }
+    }
+}
+
+@media (max-width: $phones) {
+    .form-container {
+
+        .signup-form .signup-button,
+        .login-form .login-button {
+            width: 35%;
+        }
+
+        .signup-form #username,
+        .signup-form #password,
+        .login-form #username,
+        .login-form #password {
+            width: 75%;
+        }
+    }
+}
