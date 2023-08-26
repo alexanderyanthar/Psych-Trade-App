@@ -56,21 +56,21 @@ hamburgerMenu.addEventListener('click', () => {
 
 // front-end JavaScript (front-end-js-file.js)
 
-// document.getElementById('signup-Button').addEventListener('click', () => {
-//   window.location.href = 'http://psych-trade-app.eba-gawxqyim.us-east-1.elasticbeanstalk.com/signup';
-// })
-
 document.getElementById('signup-Button').addEventListener('click', () => {
-  window.location.href = 'http://localhost:3000/signup';
+  window.location.href = 'http://psych-trade-app.eba-gawxqyim.us-east-1.elasticbeanstalk.com/signup';
 })
 
-document.getElementById('login-btn').addEventListener('click', () => {
-  window.location.href = 'http://localhost:3000/login';
-})
+// document.getElementById('signup-Button').addEventListener('click', () => {
+//   window.location.href = 'http://localhost:3000/signup';
+// })
 
 // document.getElementById('login-btn').addEventListener('click', () => {
-//     window.location.href = 'http://psych-trade-app.eba-gawxqyim.us-east-1.elasticbeanstalk.com/login';
+//   window.location.href = 'http://localhost:3000/login';
 // })
+
+document.getElementById('login-btn').addEventListener('click', () => {
+    window.location.href = 'http://psych-trade-app.eba-gawxqyim.us-east-1.elasticbeanstalk.com/login';
+})
 
 // error handling for sign up form
 
