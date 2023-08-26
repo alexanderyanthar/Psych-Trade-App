@@ -25,6 +25,32 @@
         font-size: 3rem;
     }
 
+    .info-icon {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .info-icon .info-bubble {
+        position: absolute;
+        top: 30px;
+        left: -10px;
+        display: none;
+        width: 400px;
+        padding: 10px;
+        background-color: $cleanWhite;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        color: $deepBlue;
+    }
+
+    .info-icon:hover .info-bubble,
+    .info-icon:focus .info-bubble {
+        display: block;
+    }
+
     .signup-form,
     .login-form {
         display: flex;
@@ -51,6 +77,11 @@
             border-radius: 10px;
             border: none;
         }
+    }
+
+    .error-message {
+        color: #ff6347;
+
     }
 }
 

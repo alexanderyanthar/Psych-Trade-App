@@ -16,7 +16,13 @@
             margin-top: 1rem;
         }
 
-        .logout-button {
+        .logout-form {
+            display: flex;
+            width: 100%;
+            justify-content: flex-end;
+        }
+
+        form .logout-button {
             margin: 1rem 0;
             background-color: $richGold;
             padding: 1rem;

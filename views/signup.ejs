@@ -24,17 +24,26 @@
     <%- include ('header.ejs') %>
         <div class="form-container">
             <h1>Sign Up</h1>
+            <div class="info-icon">
+                <i class="fa-regular fa-circle-question" style="color: #ffc72c;"></i>
+                <div class="info-bubble" role="tool-tip">
+                    <p>Username must be at least 6 characters long with only letters and numbers.</p>
+                    <br />
+                    <p>Password must be 8 characters long and contain 1 symbol and 1 number.</p>
+                </div>
+            </div>
             <form class="signup-form" id="signup-form" action="/signup" method="POST">
                 <label for="username"></label>
                 <input type="text" id="username" name="username" placeholder="username" required>
                 <br>
                 <label for="passsword"></label>
                 <input type="password" id="password" name="password" placeholder="password" required>
+                <div class="error-message" id="error-message"><%= errorMessage %></div>
                 <button class="signup-button" type="submit">Sign up</button>
             </form>
         </div>
         <%- include ('footer.ejs') %>
-            <script src="../public/scripts/app.js"></script>
+            <script src="../scripts/app.js"></script>
 </body>
 
 </html>
