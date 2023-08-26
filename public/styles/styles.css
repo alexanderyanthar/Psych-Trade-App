@@ -790,7 +790,6 @@ footer .wrapper .legal-footer-container .legal .legal-list li a:hover {
     border: none;
     flex-direction: column;
     align-items: center;
-    height: 90vh;
     background-color: #002a5c;
     width: 100%;
     left: 100%;
@@ -798,6 +797,9 @@ footer .wrapper .legal-footer-container .legal .legal-list li a:hover {
   }
   header nav .header-nav.active {
     left: 0%;
+  }
+  header nav .header-nav.active li {
+    margin: 1.75rem 0;
   }
   header nav .hamburger-menu-container {
     background-color: #002a5c;
