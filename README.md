@@ -34,6 +34,8 @@ While PsychTrade has already achieved significant milestones, my ongoing efforts
 - **Comprehensive User Profiles**: I plan to develop comprehensive user profiles that offer in-depth insights into trading behaviors and preferences.
 - **Real-Time Data Integration**: Integrating real-time market data will enable users to align their trading strategies with current market conditions.
 - **Expanded Assessments**: Future plans include incorporating additional assessments to provide traders with a more comprehensive and accurate picture of their best trading path.
+- **Code Refinement for DRY Principles**: I am committed to reworking the codebase to ensure adherence to DRY (Don't Repeat Yourself) principles, optimizing maintainability and reducing redundancy.
+- **Continuous Accessibility Measures**: I will ensure that the platform consistently meets and surpasses accessibility standards, providing an inclusive experience for all users.
 
 ## Learning and Growth
 
