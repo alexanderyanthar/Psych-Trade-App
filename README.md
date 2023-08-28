@@ -1,6 +1,6 @@
 # PsychTrade Project Showcase
 
-Welcome to the showcase of **PsychTrade**, an innovative web platform hosted on AWS Elastic Beanstalk. This project is powered by Express.js, Node.js, JavaScript, SASS, Bootstrap, MongoDB, and is designed to offer personalized trading strategies based on psychological tests.
+Welcome to the showcase of **PsychTrade**, an innovative web platform hosted on AWS Elastic Beanstalk. This project is powered by Express.js, Node.js, JavaScript, EJS templates, SASS, Bootstrap, MongoDB, and is designed to offer personalized trading strategies based on psychological tests.
 
 ## Project Overview
 
@@ -9,6 +9,7 @@ PsychTrade introduces a pioneering approach to trading strategies by utilizing p
 - Express.js
 - Node.js
 - JavaScript
+- EJS templates
 - SASS
 - Bootstrap
 - MongoDB
@@ -19,6 +20,7 @@ PsychTrade introduces a pioneering approach to trading strategies by utilizing p
 - **Psychological Test Integration**: PsychTrade seamlessly incorporates psychological tests, providing users with valuable insights into their trading personality and risk tolerance.
 - **Personalized Recommendations**: Utilizing the test results, the platform generates personalized trading strategies that cater to each user's psychological characteristics.
 - **User-Friendly Interface**: The platform boasts an intuitive design, ensuring a seamless trading experience for all users.
+- **EJS Templates**: EJS templates are used to create dynamic and interactive views, enhancing user engagement and platform functionality.
 - **RESTful APIs**: The implementation of RESTful APIs ensures smooth communication between users and the PsychTrade platform.
 - **Modern Design with SASS and Bootstrap**: The use of SASS and Bootstrap guarantees a contemporary, responsive design that delivers optimal performance across various devices.
 - **Secure Data Management with MongoDB**: MongoDB efficiently handles user data, providing a secure and reliable storage solution.
@@ -40,6 +42,7 @@ Throughout the development of PsychTrade, I gained profound insights and experti
 - **MongoDB Mastery**: I grasped the complexity of using MongoDB for efficient data management, a crucial skill for creating robust web applications.
 - **Backend Proficiency**: I deepened my understanding of backend development through Express.js, enabling me to create reliable and performant server-side functionality.
 - **JWT Implementation**: I acquired proficiency in using JSON Web Tokens (JWT) to enhance the platform's security and user authentication.
+- **EJS Templating**: I successfully employed EJS templates to create dynamic views that enrich the user experience.
 - **Code Organization**: Recognizing the importance of a structured codebase, I prioritized maintaining a clean and organized directory hierarchy.
 
 ## Accessing the Code
@@ -55,4 +58,3 @@ PsychTrade reflects my ability to combine technology, psychology, and finance to
 Thank you for considering PsychTrade for your review.
 
 **Alexander Yanthar**
-
