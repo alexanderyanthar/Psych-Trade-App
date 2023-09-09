@@ -13,13 +13,17 @@
 </head>
 
 <body>
+    <!-- add the header partial -->
     <%- include ('header.ejs') %>
         <main class="assessment-container">
             <div class="wrapper">
                 <h1 class="assessment-title">Analysis Assessment</h1>
+                <!-- post request data from assessment submission -->
                 <form class="assessment-form" action="/submitAssessment" method="POST" id="assessmentForm">
                     <div class="question-container">
+                        <!-- setting up pagination for all questions through classes, and buttons -->
                         <% for (let i=0; i < questions.length; i++) { %>
+                            <!-- iterating through the questions so the right questions display and the right options display -->
                             <div class="question <%= i === 0 ? '' : 'hidden' %>">
                                 <p>
                                     <%= questions[i].text %>
@@ -45,11 +49,13 @@
                         <button class="general-button-styling" type="submit" id="submitButton"
                             class="hidden">Submit</button>
                     </div>
+                    <!-- adding error messages for unwanted user interactions -->
                     <div class="error-message" id="questionError">Please select an option before moving to the next question.</div>
                     <div class="error-message" id="submissionError">Please answer all questions before submitting.</div>
                 </form>
             </div>
         </main>
+        <!-- adding footer partial -->
         <%- include ('footer.ejs') %>
             <script src="./scripts/assessmentScript.js"></script>
 </body>

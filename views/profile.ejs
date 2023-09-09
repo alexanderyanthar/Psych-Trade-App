@@ -26,11 +26,14 @@
         <div class="wrapper">
             <h1 class="welcome-text">Welcome! <%= username %>
             </h1>
-
+            <!-- Profile page for users -->
             <% if (!hasTakenAssessment) { %>
+                <!-- display prompt to take assessment if user has not taken one -->
                 <a class="take-assessment-link" href="/assessment">Take Assessment!</a>
                 <img src="./assets/take-assessment-img.svg" alt="">
                 <% } else { %>
+                    <!-- if the user has taken the assessment, use conditional statments to check what the userPreference is -->
+                    <!-- Depending on perference, display specific text, images, and the user preference -->
                     <% if (userPreference==='fundamental' ) { %>
                         <div class="analysis-container">
                             <p class="preferred-analysis-title">Your Preferred Analysis Type: <span>
@@ -117,6 +120,7 @@
                         </div>
                         <% } %>
                     <% } %>
+                    <!-- logout button incased in form for post request -->
                     <form class="logout-form" action="/logout" method="POST">
                         <button class="logout-button" type="submit">Logout</button>
                     </form>

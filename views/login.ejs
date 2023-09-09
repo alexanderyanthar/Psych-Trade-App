@@ -24,6 +24,7 @@
     <%- include ('header.ejs') %>
         <div class="form-container">
             <h1>Log in</h1>
+            <!-- login form that send to post request along with a client side rendering of the error messages -->
             <form class="login-form" id="login-form" action="/login" method="POST">
                 <label for="username"></label>
                 <input type="text" id="username" name="username" required>
