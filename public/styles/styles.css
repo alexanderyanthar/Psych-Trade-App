@@ -666,6 +666,8 @@ footer .wrapper .legal-footer-container {
   align-items: center;
   border-top: 5px solid #ffc72c;
   margin-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-top: 0.5rem;
 }
 footer .wrapper .legal-footer-container .copyright {
   width: 25%;
