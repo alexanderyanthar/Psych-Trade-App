@@ -1,7 +1,6 @@
 @use "./variables" as *;
 
 footer {
-    height: 45vh;
     background-color: $deepBlue;
     border-top: 10px solid $cleanWhite;
     color: $richGold;
@@ -43,6 +42,7 @@ footer .wrapper .site-footer-container {
 
         ul {
             list-style: none;
+            margin: 1rem 0;
 
             li a {
                 text-decoration: none;
@@ -93,6 +93,7 @@ footer .wrapper .legal-footer-container {
     justify-content: space-around;
     align-items: center;
     border-top: 5px solid $richGold;
+    margin-top: 1.5rem;
 
 
     .copyright {
