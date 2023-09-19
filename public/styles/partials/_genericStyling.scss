@@ -4,6 +4,10 @@ html {
     -webkit-text-size-adjust: 100%
 }
 
+.no-scroll {
+    overflow-y: hidden;
+}
+
 body {
     margin: 0
 }

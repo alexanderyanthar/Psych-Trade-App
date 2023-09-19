@@ -4,6 +4,10 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+.no-scroll {
+  overflow-y: hidden;
+}
+
 body {
   margin: 0;
 }
@@ -788,6 +792,7 @@ footer .wrapper .legal-footer-container .legal .legal-list li a:hover {
     position: relative;
   }
   header nav .header-nav {
+    height: 100vh;
     justify-content: space-around;
     position: absolute;
     border: none;
@@ -800,6 +805,8 @@ footer .wrapper .legal-footer-container .legal .legal-list li a:hover {
   }
   header nav .header-nav.active {
     left: 0%;
+    position: fixed;
+    overflow-y: hidden;
   }
   header nav .header-nav.active li {
     margin: 1.75rem 0;
@@ -932,14 +939,14 @@ footer .wrapper .legal-footer-container .legal .legal-list li a:hover {
   }
 }
 .signup-header {
-  height: 9vh;
+  height: 7vh;
 }
 .signup-header nav .header-nav {
   position: relative;
 }
 
 .form-container {
-  height: auto;
+  height: 65vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -39,19 +39,37 @@ headerNav.addEventListener('click', () => {
     hamRotate.classList.remove('active');
 });
 
+const openMenu = () => {
+    headerNav.classList.add('active');
+    ham.classList.add('active');
+    hamRotate.classList.add('active');
+    document.documentElement.classList.add('no-scroll');
+    menuOpen = true;   
+}
+
+const closeMenu = () => {
+    headerNav.classList.remove('active');
+    ham.classList.remove('active');
+    hamRotate.classList.remove('active');
+    document.documentElement.classList.remove('no-scroll');
+    menuOpen = false;
+}
+
 hamburgerMenu.addEventListener('click', () => {
     if (!menuOpen) {
-        headerNav.classList.add('active');
-        ham.classList.add('active');
-        hamRotate.classList.add('active');
-        menuOpen = true;
+        openMenu()
     } else {
-        headerNav.classList.remove('active');
-        ham.classList.remove('active');
-        hamRotate.classList.remove('active');
-        menuOpen = false;
+        closeMenu();
     }
-});
+})
+
+headerLink.forEach(link => {
+    link.addEventListener('click', () => {
+        if (menuOpen) {
+            closeMenu();
+        }
+    })
+})
 
 
 // front-end JavaScript (front-end-js-file.js)

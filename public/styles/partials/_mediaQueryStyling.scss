@@ -139,6 +139,7 @@
         position: relative;
 
         .header-nav {
+            height: 100vh;
             justify-content: space-around;
             position: absolute;
             border: none;
@@ -152,6 +153,8 @@
 
         .header-nav.active {
             left: 0%;
+            position: fixed;
+            overflow-y: hidden;
 
             li {
                 margin: 1.75rem 0;
