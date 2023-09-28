@@ -25,6 +25,7 @@ mongoose.connect(uri, {
     useUnifiedTopology: true,
 });
 
+// comment for peer to look over
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
